@@ -6,7 +6,6 @@ const environment = process.env.NODE_ENV ?
     : "development";
 
 const path = join(process.cwd(), `.env.${environment}`);
-
 config({
     path
 });

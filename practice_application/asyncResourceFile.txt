@@ -1,0 +1,7490 @@
+
+        state: init 
+        execution Async Id: 1
+        async Id: 4
+        type: TCPSERVERWRAP
+        trigger async id: 1
+        resource: reading : false; onconnection : null; 
+        
+        
+        state: init 
+        execution Async Id: 1
+        async Id: 5
+        type: TickObject
+        trigger async id: 4
+        resource: callback : function emitListeningNT(self) {
+  // Ensure handle hasn't closed
+  if (self._handle)
+    self.emit('listening');
+}; args : [object Object]; 
+        
+        
+        state: before 
+        execution Async Id: 5
+        async Id: 5
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 5
+        async Id: 6
+        type: TTYWRAP
+        trigger async id: 5
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 5
+        async Id: 7
+        type: TickObject
+        trigger async id: 5
+        resource: callback : function afterWriteTick({ stream, state, count, cb }) {
+  state.afterWriteTickInfo = null;
+  return afterWrite(stream, state, count, cb);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 5
+        async Id: 5
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 7
+        async Id: 7
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 7
+        async Id: 7
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 5
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 7
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 0
+        async Id: 8
+        type: TCPWRAP
+        trigger async id: 4
+        resource: reading : false; onconnection : null; 
+        
+        
+        state: before 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 9
+        type: HTTPINCOMINGMESSAGE
+        trigger async id: 8
+        resource: type : HTTPINCOMINGMESSAGE; socket : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 10
+        type: TickObject
+        trigger async id: 8
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 10
+        async Id: 10
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 10
+        async Id: 10
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 10
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 9
+        async Id: 11
+        type: Timeout
+        trigger async id: 9
+        resource: _idleTimeout : 98; _idlePrev : 11; _idleNext : 11; _idleStart : null; _onTimeout : function resetCache() {
+  nowCache = undefined;
+  utcCache = undefined;
+}; _timerArgs : undefined; _repeat : null; _destroyed : false; 
+        
+        
+        state: init 
+        execution Async Id: 9
+        async Id: 12
+        type: TickObject
+        trigger async id: 9
+        resource: callback : function afterWriteTick({ stream, state, count, cb }) {
+  state.afterWriteTickInfo = null;
+  return afterWrite(stream, state, count, cb);
+}; args : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 9
+        async Id: 13
+        type: FSREQCALLBACK
+        trigger async id: 9
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 9
+        async Id: 14
+        type: Immediate
+        trigger async id: 9
+        resource: _idleNext : null; _idlePrev : null; _onImmediate : function () {
+    // restore vals
+    for (var i = 0; i < props.length; i++) {
+      obj[props[i]] = vals[i];
+    }
+
+    return fn.apply(this, arguments);
+  }; _argv : TypeError [ERR_INVALID_ARG_TYPE]: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received undefined; _destroyed : false; 
+        
+        
+        state: after 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 9
+        async Id: 15
+        type: TickObject
+        trigger async id: 9
+        resource: callback : function emitReadable_(stream) {
+  const state = stream._readableState;
+  debug('emitReadable_', state.destroyed, state.length, state.ended);
+  if (!state.destroyed && (state.length || state.ended)) {
+    stream.emit('readable');
+    state.emittedReadable = false;
+  }
+
+  // The stream needs another readable event if:
+  // 1. It is not flowing, as the flow mechanism will take
+  //    care of it.
+  // 2. It is not ended.
+  // 3. It is below the highWaterMark, so we can schedule
+  //    another readable later.
+  state.needReadable =
+    !state.flowing &&
+    !state.ended &&
+    state.length <= state.highWaterMark;
+  flow(stream);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 12
+        async Id: 12
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 12
+        async Id: 16
+        type: TickObject
+        trigger async id: 12
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 12
+        async Id: 17
+        type: TickObject
+        trigger async id: 12
+        resource: callback : function emitCloseNT(self) {
+  self.emit('close');
+}; args : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 12
+        async Id: 18
+        type: Timeout
+        trigger async id: 12
+        resource: _idleTimeout : 5000; _idlePrev : 18; _idleNext : 18; _idleStart : null; _onTimeout : function () { [native code] }; _timerArgs : undefined; _repeat : null; _destroyed : false; 
+        
+        
+        state: after 
+        execution Async Id: 12
+        async Id: 12
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 15
+        async Id: 15
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 15
+        async Id: 19
+        type: TickObject
+        trigger async id: 15
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 15
+        async Id: 15
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 16
+        async Id: 16
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 16
+        async Id: 20
+        type: TickObject
+        trigger async id: 16
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 16
+        async Id: 21
+        type: TickObject
+        trigger async id: 16
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 16
+        async Id: 22
+        type: TickObject
+        trigger async id: 16
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 16
+        async Id: 16
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 17
+        async Id: 17
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 17
+        async Id: 17
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 19
+        async Id: 19
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 19
+        async Id: 19
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 20
+        async Id: 20
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 20
+        async Id: 20
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 21
+        async Id: 21
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 21
+        async Id: 21
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 22
+        async Id: 22
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 22
+        async Id: 22
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 0
+        async Id: 23
+        type: TCPWRAP
+        trigger async id: 4
+        resource: reading : false; onconnection : null; 
+        
+        
+        state: before 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 24
+        type: HTTPINCOMINGMESSAGE
+        trigger async id: 23
+        resource: type : HTTPINCOMINGMESSAGE; socket : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 25
+        type: TickObject
+        trigger async id: 23
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 25
+        async Id: 25
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 25
+        async Id: 25
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 12
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 15
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 16
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 17
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 19
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 20
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 21
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 22
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 25
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 14
+        async Id: 14
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 14
+        async Id: 26
+        type: Immediate
+        trigger async id: 14
+        resource: _idleNext : null; _idlePrev : null; _onImmediate : function () { [native code] }; _argv : TypeError [ERR_INVALID_ARG_TYPE]: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received undefined,[object Object],[object Object]; _destroyed : false; 
+        
+        
+        state: init 
+        execution Async Id: 14
+        async Id: 27
+        type: TickObject
+        trigger async id: 14
+        resource: callback : function emitCloseNT(self) {
+  const r = self._readableState;
+  const w = self._writableState;
+
+  if (r) {
+    r.closeEmitted = true;
+  }
+
+  if ((w && w.emitClose) || (r && r.emitClose)) {
+    self.emit('close');
+  }
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 14
+        async Id: 14
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 27
+        async Id: 27
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 27
+        async Id: 27
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 13
+        async Id: 13
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 13
+        async Id: 13
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 18
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 14
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 27
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 13
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 26
+        async Id: 26
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 26
+        async Id: 28
+        type: TickObject
+        trigger async id: 26
+        resource: callback : function afterWriteTick({ stream, state, count, cb }) {
+  state.afterWriteTickInfo = null;
+  return afterWrite(stream, state, count, cb);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 26
+        async Id: 26
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 28
+        async Id: 28
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 28
+        async Id: 28
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 26
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 28
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 8
+        async Id: 8
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 8
+        async Id: 8
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 8
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 11
+        async Id: 11
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 11
+        async Id: 11
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 11
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 24
+        async Id: 24
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 24
+        async Id: 24
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 24
+        async Id: 24
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 24
+        async Id: 29
+        type: TickObject
+        trigger async id: 24
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 24
+        async Id: 24
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 24
+        async Id: 24
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 24
+        async Id: 30
+        type: TickObject
+        trigger async id: 24
+        resource: callback : function emitReadable_(stream) {
+  const state = stream._readableState;
+  debug('emitReadable_', state.destroyed, state.length, state.ended);
+  if (!state.destroyed && (state.length || state.ended)) {
+    stream.emit('readable');
+    state.emittedReadable = false;
+  }
+
+  // The stream needs another readable event if:
+  // 1. It is not flowing, as the flow mechanism will take
+  //    care of it.
+  // 2. It is not ended.
+  // 3. It is below the highWaterMark, so we can schedule
+  //    another readable later.
+  state.needReadable =
+    !state.flowing &&
+    !state.ended &&
+    state.length <= state.highWaterMark;
+  flow(stream);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 24
+        async Id: 24
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 24
+        async Id: 24
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 24
+        async Id: 24
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 29
+        async Id: 29
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 29
+        async Id: 31
+        type: TickObject
+        trigger async id: 29
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 29
+        async Id: 32
+        type: TickObject
+        trigger async id: 29
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 29
+        async Id: 33
+        type: TickObject
+        trigger async id: 29
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 29
+        async Id: 29
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 30
+        async Id: 30
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 30
+        async Id: 34
+        type: TickObject
+        trigger async id: 30
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 30
+        async Id: 30
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 31
+        async Id: 31
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 31
+        async Id: 35
+        type: Timeout
+        trigger async id: 31
+        resource: _idleTimeout : 959; _idlePrev : 35; _idleNext : 35; _idleStart : null; _onTimeout : function resetCache() {
+  nowCache = undefined;
+  utcCache = undefined;
+}; _timerArgs : undefined; _repeat : null; _destroyed : false; 
+        
+        
+        state: init 
+        execution Async Id: 31
+        async Id: 36
+        type: TickObject
+        trigger async id: 31
+        resource: callback : function afterWriteTick({ stream, state, count, cb }) {
+  state.afterWriteTickInfo = null;
+  return afterWrite(stream, state, count, cb);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 31
+        async Id: 31
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 32
+        async Id: 32
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 32
+        async Id: 32
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 33
+        async Id: 33
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 33
+        async Id: 33
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 34
+        async Id: 34
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 34
+        async Id: 34
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 36
+        async Id: 36
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 36
+        async Id: 37
+        type: TickObject
+        trigger async id: 36
+        resource: callback : function emitCloseNT(self) {
+  self.emit('close');
+}; args : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 36
+        async Id: 38
+        type: Timeout
+        trigger async id: 36
+        resource: _idleTimeout : 5000; _idlePrev : 38; _idleNext : 38; _idleStart : null; _onTimeout : function () { [native code] }; _timerArgs : undefined; _repeat : null; _destroyed : false; 
+        
+        
+        state: after 
+        execution Async Id: 36
+        async Id: 36
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 37
+        async Id: 37
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 37
+        async Id: 37
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 29
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 30
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 31
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 32
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 33
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 34
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 36
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 37
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 35
+        async Id: 35
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 35
+        async Id: 35
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 35
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 38
+        async Id: 38
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 38
+        async Id: 39
+        type: TickObject
+        trigger async id: 38
+        resource: callback : function emitCloseNT(self) {
+  const r = self._readableState;
+  const w = self._writableState;
+
+  if (r) {
+    r.closeEmitted = true;
+  }
+
+  if ((w && w.emitClose) || (r && r.emitClose)) {
+    self.emit('close');
+  }
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 38
+        async Id: 38
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 39
+        async Id: 39
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 39
+        async Id: 39
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 38
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 39
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 23
+        async Id: 23
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 23
+        async Id: 23
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 24
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 23
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 0
+        async Id: 40
+        type: TCPWRAP
+        trigger async id: 4
+        resource: reading : false; onconnection : null; 
+        
+        
+        state: before 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 41
+        type: HTTPINCOMINGMESSAGE
+        trigger async id: 40
+        resource: type : HTTPINCOMINGMESSAGE; socket : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 42
+        type: TickObject
+        trigger async id: 40
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 42
+        async Id: 42
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 42
+        async Id: 42
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 42
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 41
+        async Id: 41
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 41
+        async Id: 41
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 41
+        async Id: 41
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 41
+        async Id: 43
+        type: FSREQCALLBACK
+        trigger async id: 41
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 41
+        async Id: 44
+        type: FSREQCALLBACK
+        trigger async id: 41
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 41
+        async Id: 45
+        type: TickObject
+        trigger async id: 41
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 41
+        async Id: 41
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 41
+        async Id: 41
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 41
+        async Id: 46
+        type: TickObject
+        trigger async id: 41
+        resource: callback : function emitReadable_(stream) {
+  const state = stream._readableState;
+  debug('emitReadable_', state.destroyed, state.length, state.ended);
+  if (!state.destroyed && (state.length || state.ended)) {
+    stream.emit('readable');
+    state.emittedReadable = false;
+  }
+
+  // The stream needs another readable event if:
+  // 1. It is not flowing, as the flow mechanism will take
+  //    care of it.
+  // 2. It is not ended.
+  // 3. It is below the highWaterMark, so we can schedule
+  //    another readable later.
+  state.needReadable =
+    !state.flowing &&
+    !state.ended &&
+    state.length <= state.highWaterMark;
+  flow(stream);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 41
+        async Id: 41
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 41
+        async Id: 41
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 41
+        async Id: 41
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 45
+        async Id: 45
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 45
+        async Id: 45
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 46
+        async Id: 46
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 46
+        async Id: 46
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 0
+        async Id: 47
+        type: TCPWRAP
+        trigger async id: 4
+        resource: reading : false; onconnection : null; 
+        
+        
+        state: before 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 48
+        type: HTTPINCOMINGMESSAGE
+        trigger async id: 47
+        resource: type : HTTPINCOMINGMESSAGE; socket : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 49
+        type: TickObject
+        trigger async id: 47
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 49
+        async Id: 49
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 49
+        async Id: 49
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 45
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 46
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 49
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 43
+        async Id: 43
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 43
+        async Id: 50
+        type: FSREQCALLBACK
+        trigger async id: 43
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 43
+        async Id: 43
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 44
+        async Id: 44
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 44
+        async Id: 51
+        type: FSREQCALLBACK
+        trigger async id: 44
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 44
+        async Id: 44
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 43
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 44
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 50
+        async Id: 50
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 50
+        async Id: 50
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 51
+        async Id: 51
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 51
+        async Id: 52
+        type: TickObject
+        trigger async id: 51
+        resource: callback : function maybeReadMore_(stream, state) {
+  // Attempt to read more data if we should.
+  //
+  // The conditions for reading more data are (one of):
+  // - Not enough data buffered (state.length < state.highWaterMark). The loop
+  //   is responsible for filling the buffer with enough data if such data
+  //   is available. If highWaterMark is 0 and we are not in the flowing mode
+  //   we should _not_ attempt to buffer any extra data. We'll get more data
+  //   when the stream consumer calls read() instead.
+  // - No data in the buffer, and the stream is in flowing mode. In this mode
+  //   the loop below is responsible for ensuring read() is called. Failing to
+  //   call read here would abort the flow and there's no other mechanism for
+  //   continuing the flow if the stream consumer has just subscribed to the
+  //   'data' event.
+  //
+  // In addition to the above conditions to keep reading data, the following
+  // conditions prevent the data from being read:
+  // - The stream has ended (state.ended).
+  // - There is already a pending 'read' operation (state.reading). This is a
+  //   case where the the stream has called the implementation defined _read()
+  //   method, but they are processing the call asynchronously and have _not_
+  //   called push() with new data. In this case we skip performing more
+  //   read()s. The execution ends in this method again after the _read() ends
+  //   up calling push() with more data.
+  while (!state.reading && !state.ended &&
+         (state.length < state.highWaterMark ||
+          (state.flowing && state.length === 0))) {
+    const len = state.length;
+    debug('maybeReadMore read 0');
+    stream.read(0);
+    if (len === state.length)
+      // Didn't get any data, stop spinning.
+      break;
+  }
+  state.readingMore = false;
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 51
+        async Id: 51
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 52
+        async Id: 52
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 52
+        async Id: 53
+        type: FSREQCALLBACK
+        trigger async id: 52
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 52
+        async Id: 52
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 50
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 52
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 51
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 53
+        async Id: 53
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 53
+        async Id: 54
+        type: TickObject
+        trigger async id: 53
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 53
+        async Id: 53
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 54
+        async Id: 54
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 54
+        async Id: 55
+        type: FSREQCALLBACK
+        trigger async id: 54
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 54
+        async Id: 56
+        type: Timeout
+        trigger async id: 54
+        resource: _idleTimeout : 606; _idlePrev : 56; _idleNext : 56; _idleStart : null; _onTimeout : function resetCache() {
+  nowCache = undefined;
+  utcCache = undefined;
+}; _timerArgs : undefined; _repeat : null; _destroyed : false; 
+        
+        
+        state: init 
+        execution Async Id: 54
+        async Id: 57
+        type: TickObject
+        trigger async id: 54
+        resource: callback : function afterWriteTick({ stream, state, count, cb }) {
+  state.afterWriteTickInfo = null;
+  return afterWrite(stream, state, count, cb);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 54
+        async Id: 54
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 57
+        async Id: 57
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 57
+        async Id: 58
+        type: TickObject
+        trigger async id: 57
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 57
+        async Id: 59
+        type: TickObject
+        trigger async id: 57
+        resource: callback : function emitCloseNT(self) {
+  self.emit('close');
+}; args : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 57
+        async Id: 60
+        type: Timeout
+        trigger async id: 57
+        resource: _idleTimeout : 5000; _idlePrev : 60; _idleNext : 60; _idleStart : null; _onTimeout : function () { [native code] }; _timerArgs : undefined; _repeat : null; _destroyed : false; 
+        
+        
+        state: after 
+        execution Async Id: 57
+        async Id: 57
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 58
+        async Id: 58
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 58
+        async Id: 61
+        type: TickObject
+        trigger async id: 58
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 58
+        async Id: 62
+        type: TickObject
+        trigger async id: 58
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 58
+        async Id: 63
+        type: TickObject
+        trigger async id: 58
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 58
+        async Id: 58
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 59
+        async Id: 59
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 59
+        async Id: 59
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 61
+        async Id: 61
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 61
+        async Id: 61
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 62
+        async Id: 62
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 62
+        async Id: 62
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 63
+        async Id: 63
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 63
+        async Id: 63
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 54
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 57
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 58
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 59
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 61
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 62
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 63
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 53
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 55
+        async Id: 55
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 55
+        async Id: 64
+        type: TickObject
+        trigger async id: 55
+        resource: callback : function emitCloseNT(self) {
+  const r = self._readableState;
+  const w = self._writableState;
+
+  if (r) {
+    r.closeEmitted = true;
+  }
+
+  if ((w && w.emitClose) || (r && r.emitClose)) {
+    self.emit('close');
+  }
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 55
+        async Id: 55
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 64
+        async Id: 64
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 64
+        async Id: 64
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 64
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 55
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 56
+        async Id: 56
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 56
+        async Id: 56
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 56
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 60
+        async Id: 60
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 60
+        async Id: 65
+        type: TickObject
+        trigger async id: 60
+        resource: callback : function emitCloseNT(self) {
+  const r = self._readableState;
+  const w = self._writableState;
+
+  if (r) {
+    r.closeEmitted = true;
+  }
+
+  if ((w && w.emitClose) || (r && r.emitClose)) {
+    self.emit('close');
+  }
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 60
+        async Id: 60
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 65
+        async Id: 65
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 65
+        async Id: 65
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 60
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 65
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 40
+        async Id: 40
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 40
+        async Id: 40
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 41
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 40
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 48
+        async Id: 66
+        type: FSREQCALLBACK
+        trigger async id: 48
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 48
+        async Id: 67
+        type: FSREQCALLBACK
+        trigger async id: 48
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 48
+        async Id: 68
+        type: TickObject
+        trigger async id: 48
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 48
+        async Id: 69
+        type: TickObject
+        trigger async id: 48
+        resource: callback : function emitReadable_(stream) {
+  const state = stream._readableState;
+  debug('emitReadable_', state.destroyed, state.length, state.ended);
+  if (!state.destroyed && (state.length || state.ended)) {
+    stream.emit('readable');
+    state.emittedReadable = false;
+  }
+
+  // The stream needs another readable event if:
+  // 1. It is not flowing, as the flow mechanism will take
+  //    care of it.
+  // 2. It is not ended.
+  // 3. It is below the highWaterMark, so we can schedule
+  //    another readable later.
+  state.needReadable =
+    !state.flowing &&
+    !state.ended &&
+    state.length <= state.highWaterMark;
+  flow(stream);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 68
+        async Id: 68
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 68
+        async Id: 68
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 69
+        async Id: 69
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 69
+        async Id: 69
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 68
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 69
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 0
+        async Id: 70
+        type: TCPWRAP
+        trigger async id: 4
+        resource: reading : false; onconnection : null; 
+        
+        
+        state: before 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 71
+        type: HTTPINCOMINGMESSAGE
+        trigger async id: 70
+        resource: type : HTTPINCOMINGMESSAGE; socket : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 72
+        type: TickObject
+        trigger async id: 70
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 72
+        async Id: 72
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 72
+        async Id: 72
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 66
+        async Id: 66
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 66
+        async Id: 73
+        type: FSREQCALLBACK
+        trigger async id: 66
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 66
+        async Id: 66
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 67
+        async Id: 67
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 67
+        async Id: 74
+        type: FSREQCALLBACK
+        trigger async id: 67
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 67
+        async Id: 67
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 72
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 66
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 67
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 73
+        async Id: 73
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 73
+        async Id: 73
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 74
+        async Id: 74
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 74
+        async Id: 75
+        type: TickObject
+        trigger async id: 74
+        resource: callback : function maybeReadMore_(stream, state) {
+  // Attempt to read more data if we should.
+  //
+  // The conditions for reading more data are (one of):
+  // - Not enough data buffered (state.length < state.highWaterMark). The loop
+  //   is responsible for filling the buffer with enough data if such data
+  //   is available. If highWaterMark is 0 and we are not in the flowing mode
+  //   we should _not_ attempt to buffer any extra data. We'll get more data
+  //   when the stream consumer calls read() instead.
+  // - No data in the buffer, and the stream is in flowing mode. In this mode
+  //   the loop below is responsible for ensuring read() is called. Failing to
+  //   call read here would abort the flow and there's no other mechanism for
+  //   continuing the flow if the stream consumer has just subscribed to the
+  //   'data' event.
+  //
+  // In addition to the above conditions to keep reading data, the following
+  // conditions prevent the data from being read:
+  // - The stream has ended (state.ended).
+  // - There is already a pending 'read' operation (state.reading). This is a
+  //   case where the the stream has called the implementation defined _read()
+  //   method, but they are processing the call asynchronously and have _not_
+  //   called push() with new data. In this case we skip performing more
+  //   read()s. The execution ends in this method again after the _read() ends
+  //   up calling push() with more data.
+  while (!state.reading && !state.ended &&
+         (state.length < state.highWaterMark ||
+          (state.flowing && state.length === 0))) {
+    const len = state.length;
+    debug('maybeReadMore read 0');
+    stream.read(0);
+    if (len === state.length)
+      // Didn't get any data, stop spinning.
+      break;
+  }
+  state.readingMore = false;
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 74
+        async Id: 74
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 75
+        async Id: 75
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 75
+        async Id: 76
+        type: FSREQCALLBACK
+        trigger async id: 75
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 75
+        async Id: 75
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 73
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 75
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 74
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 76
+        async Id: 76
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 76
+        async Id: 77
+        type: TickObject
+        trigger async id: 76
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 76
+        async Id: 76
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 77
+        async Id: 77
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 77
+        async Id: 78
+        type: FSREQCALLBACK
+        trigger async id: 77
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 77
+        async Id: 79
+        type: Timeout
+        trigger async id: 77
+        resource: _idleTimeout : 751; _idlePrev : 79; _idleNext : 79; _idleStart : null; _onTimeout : function resetCache() {
+  nowCache = undefined;
+  utcCache = undefined;
+}; _timerArgs : undefined; _repeat : null; _destroyed : false; 
+        
+        
+        state: init 
+        execution Async Id: 77
+        async Id: 80
+        type: TickObject
+        trigger async id: 77
+        resource: callback : function afterWriteTick({ stream, state, count, cb }) {
+  state.afterWriteTickInfo = null;
+  return afterWrite(stream, state, count, cb);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 77
+        async Id: 77
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 80
+        async Id: 80
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 80
+        async Id: 81
+        type: TickObject
+        trigger async id: 80
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 80
+        async Id: 82
+        type: TickObject
+        trigger async id: 80
+        resource: callback : function emitCloseNT(self) {
+  self.emit('close');
+}; args : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 80
+        async Id: 83
+        type: Timeout
+        trigger async id: 80
+        resource: _idleTimeout : 5000; _idlePrev : 83; _idleNext : 83; _idleStart : null; _onTimeout : function () { [native code] }; _timerArgs : undefined; _repeat : null; _destroyed : false; 
+        
+        
+        state: after 
+        execution Async Id: 80
+        async Id: 80
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 81
+        async Id: 81
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 81
+        async Id: 84
+        type: TickObject
+        trigger async id: 81
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 81
+        async Id: 85
+        type: TickObject
+        trigger async id: 81
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 81
+        async Id: 86
+        type: TickObject
+        trigger async id: 81
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 81
+        async Id: 81
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 82
+        async Id: 82
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 82
+        async Id: 82
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 84
+        async Id: 84
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 84
+        async Id: 84
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 85
+        async Id: 85
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 85
+        async Id: 85
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 86
+        async Id: 86
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 86
+        async Id: 86
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 77
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 80
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 81
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 82
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 84
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 85
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 86
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 76
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 78
+        async Id: 78
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 78
+        async Id: 87
+        type: TickObject
+        trigger async id: 78
+        resource: callback : function emitCloseNT(self) {
+  const r = self._readableState;
+  const w = self._writableState;
+
+  if (r) {
+    r.closeEmitted = true;
+  }
+
+  if ((w && w.emitClose) || (r && r.emitClose)) {
+    self.emit('close');
+  }
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 78
+        async Id: 78
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 87
+        async Id: 87
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 87
+        async Id: 87
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 87
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 78
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 79
+        async Id: 79
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 79
+        async Id: 79
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 79
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 48
+        async Id: 88
+        type: FSREQCALLBACK
+        trigger async id: 48
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 48
+        async Id: 89
+        type: FSREQCALLBACK
+        trigger async id: 48
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 48
+        async Id: 90
+        type: TickObject
+        trigger async id: 48
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 48
+        async Id: 91
+        type: TickObject
+        trigger async id: 48
+        resource: callback : function emitReadable_(stream) {
+  const state = stream._readableState;
+  debug('emitReadable_', state.destroyed, state.length, state.ended);
+  if (!state.destroyed && (state.length || state.ended)) {
+    stream.emit('readable');
+    state.emittedReadable = false;
+  }
+
+  // The stream needs another readable event if:
+  // 1. It is not flowing, as the flow mechanism will take
+  //    care of it.
+  // 2. It is not ended.
+  // 3. It is below the highWaterMark, so we can schedule
+  //    another readable later.
+  state.needReadable =
+    !state.flowing &&
+    !state.ended &&
+    state.length <= state.highWaterMark;
+  flow(stream);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 90
+        async Id: 90
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 90
+        async Id: 90
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 91
+        async Id: 91
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 91
+        async Id: 91
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 83
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 90
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 91
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 88
+        async Id: 88
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 88
+        async Id: 92
+        type: FSREQCALLBACK
+        trigger async id: 88
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 88
+        async Id: 88
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 89
+        async Id: 89
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 89
+        async Id: 93
+        type: FSREQCALLBACK
+        trigger async id: 89
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 89
+        async Id: 89
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 88
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 89
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 92
+        async Id: 92
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 92
+        async Id: 92
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 93
+        async Id: 93
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 93
+        async Id: 94
+        type: TickObject
+        trigger async id: 93
+        resource: callback : function maybeReadMore_(stream, state) {
+  // Attempt to read more data if we should.
+  //
+  // The conditions for reading more data are (one of):
+  // - Not enough data buffered (state.length < state.highWaterMark). The loop
+  //   is responsible for filling the buffer with enough data if such data
+  //   is available. If highWaterMark is 0 and we are not in the flowing mode
+  //   we should _not_ attempt to buffer any extra data. We'll get more data
+  //   when the stream consumer calls read() instead.
+  // - No data in the buffer, and the stream is in flowing mode. In this mode
+  //   the loop below is responsible for ensuring read() is called. Failing to
+  //   call read here would abort the flow and there's no other mechanism for
+  //   continuing the flow if the stream consumer has just subscribed to the
+  //   'data' event.
+  //
+  // In addition to the above conditions to keep reading data, the following
+  // conditions prevent the data from being read:
+  // - The stream has ended (state.ended).
+  // - There is already a pending 'read' operation (state.reading). This is a
+  //   case where the the stream has called the implementation defined _read()
+  //   method, but they are processing the call asynchronously and have _not_
+  //   called push() with new data. In this case we skip performing more
+  //   read()s. The execution ends in this method again after the _read() ends
+  //   up calling push() with more data.
+  while (!state.reading && !state.ended &&
+         (state.length < state.highWaterMark ||
+          (state.flowing && state.length === 0))) {
+    const len = state.length;
+    debug('maybeReadMore read 0');
+    stream.read(0);
+    if (len === state.length)
+      // Didn't get any data, stop spinning.
+      break;
+  }
+  state.readingMore = false;
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 93
+        async Id: 93
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 94
+        async Id: 94
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 94
+        async Id: 95
+        type: FSREQCALLBACK
+        trigger async id: 94
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 94
+        async Id: 94
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 92
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 94
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 93
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 95
+        async Id: 95
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 95
+        async Id: 96
+        type: TickObject
+        trigger async id: 95
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 95
+        async Id: 95
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 96
+        async Id: 96
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 96
+        async Id: 97
+        type: FSREQCALLBACK
+        trigger async id: 96
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 96
+        async Id: 98
+        type: Timeout
+        trigger async id: 96
+        resource: _idleTimeout : 400; _idlePrev : 98; _idleNext : 98; _idleStart : null; _onTimeout : function resetCache() {
+  nowCache = undefined;
+  utcCache = undefined;
+}; _timerArgs : undefined; _repeat : null; _destroyed : false; 
+        
+        
+        state: init 
+        execution Async Id: 96
+        async Id: 99
+        type: TickObject
+        trigger async id: 96
+        resource: callback : function afterWriteTick({ stream, state, count, cb }) {
+  state.afterWriteTickInfo = null;
+  return afterWrite(stream, state, count, cb);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 96
+        async Id: 96
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 99
+        async Id: 99
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 99
+        async Id: 100
+        type: TickObject
+        trigger async id: 99
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 99
+        async Id: 101
+        type: TickObject
+        trigger async id: 99
+        resource: callback : function emitCloseNT(self) {
+  self.emit('close');
+}; args : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 99
+        async Id: 102
+        type: Timeout
+        trigger async id: 99
+        resource: _idleTimeout : 5000; _idlePrev : 102; _idleNext : 102; _idleStart : null; _onTimeout : function () { [native code] }; _timerArgs : undefined; _repeat : null; _destroyed : false; 
+        
+        
+        state: after 
+        execution Async Id: 99
+        async Id: 99
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 100
+        async Id: 100
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 100
+        async Id: 103
+        type: TickObject
+        trigger async id: 100
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 100
+        async Id: 104
+        type: TickObject
+        trigger async id: 100
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 100
+        async Id: 105
+        type: TickObject
+        trigger async id: 100
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 100
+        async Id: 100
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 101
+        async Id: 101
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 101
+        async Id: 101
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 103
+        async Id: 103
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 103
+        async Id: 103
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 104
+        async Id: 104
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 104
+        async Id: 104
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 105
+        async Id: 105
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 105
+        async Id: 105
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 96
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 99
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 100
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 101
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 103
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 104
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 105
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 95
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 97
+        async Id: 97
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 97
+        async Id: 106
+        type: TickObject
+        trigger async id: 97
+        resource: callback : function emitCloseNT(self) {
+  const r = self._readableState;
+  const w = self._writableState;
+
+  if (r) {
+    r.closeEmitted = true;
+  }
+
+  if ((w && w.emitClose) || (r && r.emitClose)) {
+    self.emit('close');
+  }
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 97
+        async Id: 97
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 106
+        async Id: 106
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 106
+        async Id: 106
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 106
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 97
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 98
+        async Id: 98
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 98
+        async Id: 98
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 98
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 102
+        async Id: 102
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 102
+        async Id: 107
+        type: TickObject
+        trigger async id: 102
+        resource: callback : function emitCloseNT(self) {
+  const r = self._readableState;
+  const w = self._writableState;
+
+  if (r) {
+    r.closeEmitted = true;
+  }
+
+  if ((w && w.emitClose) || (r && r.emitClose)) {
+    self.emit('close');
+  }
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 102
+        async Id: 102
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 107
+        async Id: 107
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 107
+        async Id: 107
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 102
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 107
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 47
+        async Id: 47
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 47
+        async Id: 47
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 1
+        async Id: 4
+        type: TCPSERVERWRAP
+        trigger async id: 1
+        resource: reading : false; onconnection : null; 
+        
+        
+        state: init 
+        execution Async Id: 1
+        async Id: 5
+        type: TickObject
+        trigger async id: 4
+        resource: callback : function emitListeningNT(self) {
+  // Ensure handle hasn't closed
+  if (self._handle)
+    self.emit('listening');
+}; args : [object Object]; 
+        
+        
+        state: before 
+        execution Async Id: 5
+        async Id: 5
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 5
+        async Id: 6
+        type: TTYWRAP
+        trigger async id: 5
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 5
+        async Id: 7
+        type: TickObject
+        trigger async id: 5
+        resource: callback : function afterWriteTick({ stream, state, count, cb }) {
+  state.afterWriteTickInfo = null;
+  return afterWrite(stream, state, count, cb);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 5
+        async Id: 5
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 7
+        async Id: 7
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 7
+        async Id: 7
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 5
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 7
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 0
+        async Id: 8
+        type: TCPWRAP
+        trigger async id: 4
+        resource: reading : false; onconnection : null; 
+        
+        
+        state: before 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 9
+        type: HTTPINCOMINGMESSAGE
+        trigger async id: 8
+        resource: type : HTTPINCOMINGMESSAGE; socket : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 10
+        type: TickObject
+        trigger async id: 8
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 10
+        async Id: 10
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 10
+        async Id: 10
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 10
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 9
+        async Id: 11
+        type: FSREQCALLBACK
+        trigger async id: 9
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 9
+        async Id: 12
+        type: FSREQCALLBACK
+        trigger async id: 9
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 9
+        async Id: 13
+        type: TickObject
+        trigger async id: 9
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 9
+        async Id: 14
+        type: TickObject
+        trigger async id: 9
+        resource: callback : function emitReadable_(stream) {
+  const state = stream._readableState;
+  debug('emitReadable_', state.destroyed, state.length, state.ended);
+  if (!state.destroyed && (state.length || state.ended)) {
+    stream.emit('readable');
+    state.emittedReadable = false;
+  }
+
+  // The stream needs another readable event if:
+  // 1. It is not flowing, as the flow mechanism will take
+  //    care of it.
+  // 2. It is not ended.
+  // 3. It is below the highWaterMark, so we can schedule
+  //    another readable later.
+  state.needReadable =
+    !state.flowing &&
+    !state.ended &&
+    state.length <= state.highWaterMark;
+  flow(stream);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 13
+        async Id: 13
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 13
+        async Id: 13
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 14
+        async Id: 14
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 14
+        async Id: 14
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 0
+        async Id: 15
+        type: TCPWRAP
+        trigger async id: 4
+        resource: reading : false; onconnection : null; 
+        
+        
+        state: before 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 16
+        type: HTTPINCOMINGMESSAGE
+        trigger async id: 15
+        resource: type : HTTPINCOMINGMESSAGE; socket : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 17
+        type: TickObject
+        trigger async id: 15
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 17
+        async Id: 17
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 17
+        async Id: 17
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 13
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 14
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 17
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 11
+        async Id: 11
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 11
+        async Id: 18
+        type: FSREQCALLBACK
+        trigger async id: 11
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 11
+        async Id: 11
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 12
+        async Id: 12
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 12
+        async Id: 19
+        type: FSREQCALLBACK
+        trigger async id: 12
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 12
+        async Id: 12
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 11
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 12
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 18
+        async Id: 18
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 18
+        async Id: 18
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 19
+        async Id: 19
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 19
+        async Id: 20
+        type: Timeout
+        trigger async id: 19
+        resource: _idleTimeout : 847; _idlePrev : 20; _idleNext : 20; _idleStart : null; _onTimeout : function resetCache() {
+  nowCache = undefined;
+  utcCache = undefined;
+}; _timerArgs : undefined; _repeat : null; _destroyed : false; 
+        
+        
+        state: init 
+        execution Async Id: 19
+        async Id: 21
+        type: TickObject
+        trigger async id: 19
+        resource: callback : function connectionCorkNT(conn) {
+  conn.uncork();
+}; args : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 19
+        async Id: 22
+        type: TickObject
+        trigger async id: 19
+        resource: callback : function maybeReadMore_(stream, state) {
+  // Attempt to read more data if we should.
+  //
+  // The conditions for reading more data are (one of):
+  // - Not enough data buffered (state.length < state.highWaterMark). The loop
+  //   is responsible for filling the buffer with enough data if such data
+  //   is available. If highWaterMark is 0 and we are not in the flowing mode
+  //   we should _not_ attempt to buffer any extra data. We'll get more data
+  //   when the stream consumer calls read() instead.
+  // - No data in the buffer, and the stream is in flowing mode. In this mode
+  //   the loop below is responsible for ensuring read() is called. Failing to
+  //   call read here would abort the flow and there's no other mechanism for
+  //   continuing the flow if the stream consumer has just subscribed to the
+  //   'data' event.
+  //
+  // In addition to the above conditions to keep reading data, the following
+  // conditions prevent the data from being read:
+  // - The stream has ended (state.ended).
+  // - There is already a pending 'read' operation (state.reading). This is a
+  //   case where the the stream has called the implementation defined _read()
+  //   method, but they are processing the call asynchronously and have _not_
+  //   called push() with new data. In this case we skip performing more
+  //   read()s. The execution ends in this method again after the _read() ends
+  //   up calling push() with more data.
+  while (!state.reading && !state.ended &&
+         (state.length < state.highWaterMark ||
+          (state.flowing && state.length === 0))) {
+    const len = state.length;
+    debug('maybeReadMore read 0');
+    stream.read(0);
+    if (len === state.length)
+      // Didn't get any data, stop spinning.
+      break;
+  }
+  state.readingMore = false;
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 19
+        async Id: 19
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 21
+        async Id: 21
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 21
+        async Id: 23
+        type: TickObject
+        trigger async id: 21
+        resource: callback : function afterWriteTick({ stream, state, count, cb }) {
+  state.afterWriteTickInfo = null;
+  return afterWrite(stream, state, count, cb);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 21
+        async Id: 21
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 22
+        async Id: 22
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 22
+        async Id: 24
+        type: FSREQCALLBACK
+        trigger async id: 22
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 22
+        async Id: 22
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 23
+        async Id: 23
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 23
+        async Id: 23
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 18
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 21
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 22
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 23
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 19
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 24
+        async Id: 24
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 24
+        async Id: 25
+        type: TickObject
+        trigger async id: 24
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 24
+        async Id: 24
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 25
+        async Id: 25
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 25
+        async Id: 26
+        type: FSREQCALLBACK
+        trigger async id: 25
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 25
+        async Id: 27
+        type: TickObject
+        trigger async id: 25
+        resource: callback : function afterWriteTick({ stream, state, count, cb }) {
+  state.afterWriteTickInfo = null;
+  return afterWrite(stream, state, count, cb);
+}; args : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 1
+        async Id: 4
+        type: TCPSERVERWRAP
+        trigger async id: 1
+        resource: reading : false; onconnection : null; 
+        
+        
+        state: init 
+        execution Async Id: 1
+        async Id: 5
+        type: TickObject
+        trigger async id: 4
+        resource: callback : function emitListeningNT(self) {
+  // Ensure handle hasn't closed
+  if (self._handle)
+    self.emit('listening');
+}; args : [object Object]; 
+        
+        
+        state: before 
+        execution Async Id: 5
+        async Id: 5
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 5
+        async Id: 6
+        type: TTYWRAP
+        trigger async id: 5
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 5
+        async Id: 7
+        type: TickObject
+        trigger async id: 5
+        resource: callback : function afterWriteTick({ stream, state, count, cb }) {
+  state.afterWriteTickInfo = null;
+  return afterWrite(stream, state, count, cb);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 5
+        async Id: 5
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 7
+        async Id: 7
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 7
+        async Id: 7
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 5
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 7
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 0
+        async Id: 8
+        type: TCPWRAP
+        trigger async id: 4
+        resource: reading : false; onconnection : null; 
+        
+        
+        state: before 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 9
+        type: HTTPINCOMINGMESSAGE
+        trigger async id: 8
+        resource: type : HTTPINCOMINGMESSAGE; socket : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 10
+        type: TickObject
+        trigger async id: 8
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 10
+        async Id: 10
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 10
+        async Id: 10
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 10
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 9
+        async Id: 11
+        type: FSREQCALLBACK
+        trigger async id: 9
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 9
+        async Id: 12
+        type: FSREQCALLBACK
+        trigger async id: 9
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 9
+        async Id: 13
+        type: TickObject
+        trigger async id: 9
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 9
+        async Id: 14
+        type: TickObject
+        trigger async id: 9
+        resource: callback : function emitReadable_(stream) {
+  const state = stream._readableState;
+  debug('emitReadable_', state.destroyed, state.length, state.ended);
+  if (!state.destroyed && (state.length || state.ended)) {
+    stream.emit('readable');
+    state.emittedReadable = false;
+  }
+
+  // The stream needs another readable event if:
+  // 1. It is not flowing, as the flow mechanism will take
+  //    care of it.
+  // 2. It is not ended.
+  // 3. It is below the highWaterMark, so we can schedule
+  //    another readable later.
+  state.needReadable =
+    !state.flowing &&
+    !state.ended &&
+    state.length <= state.highWaterMark;
+  flow(stream);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 9
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 13
+        async Id: 13
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 13
+        async Id: 13
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 14
+        async Id: 14
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 14
+        async Id: 14
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 0
+        async Id: 15
+        type: TCPWRAP
+        trigger async id: 4
+        resource: reading : false; onconnection : null; 
+        
+        
+        state: before 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 16
+        type: HTTPINCOMINGMESSAGE
+        trigger async id: 15
+        resource: type : HTTPINCOMINGMESSAGE; socket : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 17
+        type: TickObject
+        trigger async id: 15
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 17
+        async Id: 17
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 17
+        async Id: 17
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 13
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 14
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 17
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 11
+        async Id: 11
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 11
+        async Id: 18
+        type: FSREQCALLBACK
+        trigger async id: 11
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 11
+        async Id: 11
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 12
+        async Id: 12
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 12
+        async Id: 19
+        type: FSREQCALLBACK
+        trigger async id: 12
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 12
+        async Id: 12
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 11
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 12
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 18
+        async Id: 18
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 18
+        async Id: 18
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 19
+        async Id: 19
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 19
+        async Id: 20
+        type: TickObject
+        trigger async id: 19
+        resource: callback : function maybeReadMore_(stream, state) {
+  // Attempt to read more data if we should.
+  //
+  // The conditions for reading more data are (one of):
+  // - Not enough data buffered (state.length < state.highWaterMark). The loop
+  //   is responsible for filling the buffer with enough data if such data
+  //   is available. If highWaterMark is 0 and we are not in the flowing mode
+  //   we should _not_ attempt to buffer any extra data. We'll get more data
+  //   when the stream consumer calls read() instead.
+  // - No data in the buffer, and the stream is in flowing mode. In this mode
+  //   the loop below is responsible for ensuring read() is called. Failing to
+  //   call read here would abort the flow and there's no other mechanism for
+  //   continuing the flow if the stream consumer has just subscribed to the
+  //   'data' event.
+  //
+  // In addition to the above conditions to keep reading data, the following
+  // conditions prevent the data from being read:
+  // - The stream has ended (state.ended).
+  // - There is already a pending 'read' operation (state.reading). This is a
+  //   case where the the stream has called the implementation defined _read()
+  //   method, but they are processing the call asynchronously and have _not_
+  //   called push() with new data. In this case we skip performing more
+  //   read()s. The execution ends in this method again after the _read() ends
+  //   up calling push() with more data.
+  while (!state.reading && !state.ended &&
+         (state.length < state.highWaterMark ||
+          (state.flowing && state.length === 0))) {
+    const len = state.length;
+    debug('maybeReadMore read 0');
+    stream.read(0);
+    if (len === state.length)
+      // Didn't get any data, stop spinning.
+      break;
+  }
+  state.readingMore = false;
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 19
+        async Id: 19
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 20
+        async Id: 20
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 20
+        async Id: 21
+        type: FSREQCALLBACK
+        trigger async id: 20
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 20
+        async Id: 20
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 18
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 20
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 19
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 21
+        async Id: 21
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 21
+        async Id: 22
+        type: TickObject
+        trigger async id: 21
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 21
+        async Id: 21
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 22
+        async Id: 22
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 22
+        async Id: 23
+        type: FSREQCALLBACK
+        trigger async id: 22
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 22
+        async Id: 24
+        type: Timeout
+        trigger async id: 22
+        resource: _idleTimeout : 631; _idlePrev : 24; _idleNext : 24; _idleStart : null; _onTimeout : function resetCache() {
+  nowCache = undefined;
+  utcCache = undefined;
+}; _timerArgs : undefined; _repeat : null; _destroyed : false; 
+        
+        
+        state: init 
+        execution Async Id: 22
+        async Id: 25
+        type: TickObject
+        trigger async id: 22
+        resource: callback : function afterWriteTick({ stream, state, count, cb }) {
+  state.afterWriteTickInfo = null;
+  return afterWrite(stream, state, count, cb);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 22
+        async Id: 22
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 25
+        async Id: 25
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 25
+        async Id: 26
+        type: TickObject
+        trigger async id: 25
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 25
+        async Id: 27
+        type: TickObject
+        trigger async id: 25
+        resource: callback : function emitCloseNT(self) {
+  self.emit('close');
+}; args : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 25
+        async Id: 28
+        type: Timeout
+        trigger async id: 25
+        resource: _idleTimeout : 5000; _idlePrev : 28; _idleNext : 28; _idleStart : null; _onTimeout : function () { [native code] }; _timerArgs : undefined; _repeat : null; _destroyed : false; 
+        
+        
+        state: after 
+        execution Async Id: 25
+        async Id: 25
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 26
+        async Id: 26
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 26
+        async Id: 29
+        type: TickObject
+        trigger async id: 26
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 26
+        async Id: 30
+        type: TickObject
+        trigger async id: 26
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 26
+        async Id: 31
+        type: TickObject
+        trigger async id: 26
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 26
+        async Id: 26
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 27
+        async Id: 27
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 27
+        async Id: 27
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 29
+        async Id: 29
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 29
+        async Id: 29
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 30
+        async Id: 30
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 30
+        async Id: 30
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 31
+        async Id: 31
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 31
+        async Id: 31
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 22
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 25
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 26
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 27
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 29
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 30
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 31
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 21
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 23
+        async Id: 23
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 23
+        async Id: 32
+        type: TickObject
+        trigger async id: 23
+        resource: callback : function emitCloseNT(self) {
+  const r = self._readableState;
+  const w = self._writableState;
+
+  if (r) {
+    r.closeEmitted = true;
+  }
+
+  if ((w && w.emitClose) || (r && r.emitClose)) {
+    self.emit('close');
+  }
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 23
+        async Id: 23
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 32
+        async Id: 32
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 32
+        async Id: 32
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 32
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 23
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 24
+        async Id: 24
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 24
+        async Id: 24
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 24
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 28
+        async Id: 28
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 28
+        async Id: 33
+        type: TickObject
+        trigger async id: 28
+        resource: callback : function emitCloseNT(self) {
+  const r = self._readableState;
+  const w = self._writableState;
+
+  if (r) {
+    r.closeEmitted = true;
+  }
+
+  if ((w && w.emitClose) || (r && r.emitClose)) {
+    self.emit('close');
+  }
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 28
+        async Id: 28
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 33
+        async Id: 33
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 33
+        async Id: 33
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 28
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 33
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 8
+        async Id: 8
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 8
+        async Id: 8
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 9
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 8
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 16
+        async Id: 16
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 16
+        async Id: 16
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 16
+        async Id: 16
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 16
+        async Id: 34
+        type: FSREQCALLBACK
+        trigger async id: 16
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 16
+        async Id: 35
+        type: FSREQCALLBACK
+        trigger async id: 16
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 16
+        async Id: 36
+        type: TickObject
+        trigger async id: 16
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 16
+        async Id: 16
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 16
+        async Id: 16
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 16
+        async Id: 37
+        type: TickObject
+        trigger async id: 16
+        resource: callback : function emitReadable_(stream) {
+  const state = stream._readableState;
+  debug('emitReadable_', state.destroyed, state.length, state.ended);
+  if (!state.destroyed && (state.length || state.ended)) {
+    stream.emit('readable');
+    state.emittedReadable = false;
+  }
+
+  // The stream needs another readable event if:
+  // 1. It is not flowing, as the flow mechanism will take
+  //    care of it.
+  // 2. It is not ended.
+  // 3. It is below the highWaterMark, so we can schedule
+  //    another readable later.
+  state.needReadable =
+    !state.flowing &&
+    !state.ended &&
+    state.length <= state.highWaterMark;
+  flow(stream);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 16
+        async Id: 16
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 16
+        async Id: 16
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 16
+        async Id: 16
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 36
+        async Id: 36
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 36
+        async Id: 36
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 37
+        async Id: 37
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 37
+        async Id: 37
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 36
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 37
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 0
+        async Id: 38
+        type: TCPWRAP
+        trigger async id: 4
+        resource: reading : false; onconnection : null; 
+        
+        
+        state: before 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 39
+        type: HTTPINCOMINGMESSAGE
+        trigger async id: 38
+        resource: type : HTTPINCOMINGMESSAGE; socket : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 4
+        async Id: 40
+        type: TickObject
+        trigger async id: 38
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 4
+        async Id: 4
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 40
+        async Id: 40
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 40
+        async Id: 40
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 34
+        async Id: 34
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 34
+        async Id: 41
+        type: FSREQCALLBACK
+        trigger async id: 34
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 34
+        async Id: 34
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 35
+        async Id: 35
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 35
+        async Id: 42
+        type: FSREQCALLBACK
+        trigger async id: 35
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 35
+        async Id: 35
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 40
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 34
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 35
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 41
+        async Id: 41
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 41
+        async Id: 41
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 42
+        async Id: 42
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 42
+        async Id: 43
+        type: TickObject
+        trigger async id: 42
+        resource: callback : function maybeReadMore_(stream, state) {
+  // Attempt to read more data if we should.
+  //
+  // The conditions for reading more data are (one of):
+  // - Not enough data buffered (state.length < state.highWaterMark). The loop
+  //   is responsible for filling the buffer with enough data if such data
+  //   is available. If highWaterMark is 0 and we are not in the flowing mode
+  //   we should _not_ attempt to buffer any extra data. We'll get more data
+  //   when the stream consumer calls read() instead.
+  // - No data in the buffer, and the stream is in flowing mode. In this mode
+  //   the loop below is responsible for ensuring read() is called. Failing to
+  //   call read here would abort the flow and there's no other mechanism for
+  //   continuing the flow if the stream consumer has just subscribed to the
+  //   'data' event.
+  //
+  // In addition to the above conditions to keep reading data, the following
+  // conditions prevent the data from being read:
+  // - The stream has ended (state.ended).
+  // - There is already a pending 'read' operation (state.reading). This is a
+  //   case where the the stream has called the implementation defined _read()
+  //   method, but they are processing the call asynchronously and have _not_
+  //   called push() with new data. In this case we skip performing more
+  //   read()s. The execution ends in this method again after the _read() ends
+  //   up calling push() with more data.
+  while (!state.reading && !state.ended &&
+         (state.length < state.highWaterMark ||
+          (state.flowing && state.length === 0))) {
+    const len = state.length;
+    debug('maybeReadMore read 0');
+    stream.read(0);
+    if (len === state.length)
+      // Didn't get any data, stop spinning.
+      break;
+  }
+  state.readingMore = false;
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 42
+        async Id: 42
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 43
+        async Id: 43
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 43
+        async Id: 44
+        type: FSREQCALLBACK
+        trigger async id: 43
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 43
+        async Id: 43
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 41
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 43
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 42
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 44
+        async Id: 44
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 44
+        async Id: 45
+        type: TickObject
+        trigger async id: 44
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 44
+        async Id: 44
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 45
+        async Id: 45
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 45
+        async Id: 46
+        type: FSREQCALLBACK
+        trigger async id: 45
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 45
+        async Id: 47
+        type: Timeout
+        trigger async id: 45
+        resource: _idleTimeout : 771; _idlePrev : 47; _idleNext : 47; _idleStart : null; _onTimeout : function resetCache() {
+  nowCache = undefined;
+  utcCache = undefined;
+}; _timerArgs : undefined; _repeat : null; _destroyed : false; 
+        
+        
+        state: init 
+        execution Async Id: 45
+        async Id: 48
+        type: TickObject
+        trigger async id: 45
+        resource: callback : function afterWriteTick({ stream, state, count, cb }) {
+  state.afterWriteTickInfo = null;
+  return afterWrite(stream, state, count, cb);
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 45
+        async Id: 45
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 48
+        async Id: 49
+        type: TickObject
+        trigger async id: 48
+        resource: callback : function resume_(stream, state) {
+  debug('resume', state.reading);
+  if (!state.reading) {
+    stream.read(0);
+  }
+
+  state.resumeScheduled = false;
+  stream.emit('resume');
+  flow(stream);
+  if (state.flowing && !state.reading)
+    stream.read(0);
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 48
+        async Id: 50
+        type: TickObject
+        trigger async id: 48
+        resource: callback : function emitCloseNT(self) {
+  self.emit('close');
+}; args : [object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 48
+        async Id: 51
+        type: Timeout
+        trigger async id: 48
+        resource: _idleTimeout : 5000; _idlePrev : 51; _idleNext : 51; _idleStart : null; _onTimeout : function () { [native code] }; _timerArgs : undefined; _repeat : null; _destroyed : false; 
+        
+        
+        state: after 
+        execution Async Id: 48
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 49
+        async Id: 49
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 49
+        async Id: 52
+        type: TickObject
+        trigger async id: 49
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 49
+        async Id: 53
+        type: TickObject
+        trigger async id: 49
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: init 
+        execution Async Id: 49
+        async Id: 54
+        type: TickObject
+        trigger async id: 49
+        resource: callback : function endReadableNT(state, stream) {
+  debug('endReadableNT', state.endEmitted, state.length);
+
+  // Check that we didn't get one last unshift.
+  if (!state.errorEmitted && !state.closeEmitted &&
+      !state.endEmitted && state.length === 0) {
+    state.endEmitted = true;
+    stream.emit('end');
+
+    if (stream.writable && stream.allowHalfOpen === false) {
+      process.nextTick(endWritableNT, state, stream);
+    } else if (state.autoDestroy) {
+      // In case of duplex streams we need a way to detect
+      // if the writable side is ready for autoDestroy as well.
+      const wState = stream._writableState;
+      const autoDestroy = !wState || (
+        wState.autoDestroy &&
+        // We don't expect the writable to ever 'finish'
+        // if writable is explicitly set to false.
+        (wState.finished || wState.writable === false)
+      );
+
+      if (autoDestroy) {
+        stream.destroy();
+      }
+    }
+  }
+}; args : [object Object],[object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 49
+        async Id: 49
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 50
+        async Id: 50
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 50
+        async Id: 50
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 52
+        async Id: 52
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 52
+        async Id: 52
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 53
+        async Id: 53
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 53
+        async Id: 53
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 54
+        async Id: 54
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 54
+        async Id: 54
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 45
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 48
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 49
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 50
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 52
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 53
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 54
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 44
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 46
+        async Id: 46
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 46
+        async Id: 55
+        type: TickObject
+        trigger async id: 46
+        resource: callback : function emitCloseNT(self) {
+  const r = self._readableState;
+  const w = self._writableState;
+
+  if (r) {
+    r.closeEmitted = true;
+  }
+
+  if ((w && w.emitClose) || (r && r.emitClose)) {
+    self.emit('close');
+  }
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 46
+        async Id: 46
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 55
+        async Id: 55
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 55
+        async Id: 55
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 55
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 46
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 47
+        async Id: 47
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 47
+        async Id: 47
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 47
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 51
+        async Id: 51
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: init 
+        execution Async Id: 51
+        async Id: 56
+        type: TickObject
+        trigger async id: 51
+        resource: callback : function emitCloseNT(self) {
+  const r = self._readableState;
+  const w = self._writableState;
+
+  if (r) {
+    r.closeEmitted = true;
+  }
+
+  if ((w && w.emitClose) || (r && r.emitClose)) {
+    self.emit('close');
+  }
+}; args : [object Object]; 
+        
+        
+        state: after 
+        execution Async Id: 51
+        async Id: 51
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 56
+        async Id: 56
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 56
+        async Id: 56
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 51
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: destroy 
+        execution Async Id: 0
+        async Id: 56
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: before 
+        execution Async Id: 15
+        async Id: 15
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        
+        state: after 
+        execution Async Id: 15
+        async Id: 15
+        type: undefined
+        trigger async id: undefined
+        resource: 
+        
+        

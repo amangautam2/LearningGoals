@@ -1,10 +1,13 @@
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
 import mongoose from "mongoose";
+import cors from "cors";
 
 import { RootSchema } from "./schema/root.js";
 
 const app = express();
+
+app.use(cors());
 
 mongoose.connect('mongodb+srv://amangautam:password@cluster0.khytq.mongodb.net/testGrapql?retryWrites=true&w=majority');
 mongoose.connection.once('open', () => { 
